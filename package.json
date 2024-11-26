@@ -13,11 +13,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "craco start",
-  "build": "set GENERATE_SOURCEMAP=false && craco build",
-  "test": "craco test",
-  "eject": "react-scripts eject"
-},
+    "start": "npx serve -s build",
+    "build": "cross-env GENERATE_SOURCEMAP=false craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -35,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
